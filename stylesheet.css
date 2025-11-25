@@ -12,37 +12,40 @@
     h1, h2 {
       color: #e8e8e8;
     }
-    .skill-card {
-      width: 150px;
-      height: 100px;
-      line-height: 100px; /* vertically center text */
-      text-align: center;
-      font-weight: bold;
-      color: #333;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      background-color: #f8f9fa;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      position: relative;
-    }
     
-    /* On hover, hide text and show logo from data attribute */
-    .skill-card:hover {
-      color: transparent; /* hide text */
-      background: no-repeat center center;
-      background-size: contain;
-    }
-    
-    /* Use inline style via CSS variable from data attribute */
-    .skill-card:hover {
-      background-image: url(attr(data-logo url));
-    }
-
     a.nav-link {
       color: #e8e8e8;
     }
     a.nav-link:hover {
       color: #00ffea;
     }
+    .skill-card {
+      width: 100%;
+      height: 120px;
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 120px;
+      color: #333;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    /* HOVER: Replace text with image */
+    .skill-card:hover {
+      color: transparent;
+      background-image: url("");
+    }
+    
+    /* Dynamic image loading using CSS variable from data-logo */
+    .skill-card:hover {
+      background-image: url(attr(data-logo url));
+    }
+
   </style>
